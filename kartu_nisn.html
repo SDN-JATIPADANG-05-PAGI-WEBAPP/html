@@ -156,7 +156,12 @@ value: qrtext
 })();
             
 function generateQRCode() {
-document.getElementById("qr-text").value = ""
+document.getElementById("qr-text").value = "";
+document.getElementById("nisn").innerHTML = document.getElementById("NISN").value;
+document.getElementById("namanisn").innerHTML = document.getElementById("USERNAME").value;
+document.getElementById("ttlnisn").innerHTML = document.getElementById("TEMPAT_LAHIR").value;	
+document.getElementById("tglnisn").innerHTML = document.getElementById("TGL_LAHIR").value;
+document.getElementById("jknisn").innerHTML = document.getElementById("JK").value;	
 document.getElementById("qr-text").value = "N I S N : " + document.getElementById("nisn").innerHTML + ", Nama Siswa : " + document.getElementById("namanisn").innerHTML  + ", Tempat Lahir : " + document.getElementById("ttlnisn").innerHTML + ", Tanggal Lahir : " + document.getElementById("tglnisn").innerHTML + ", Jenis Kelamin : " + document.getElementById("jknisn").innerHTML;
 
 var qrtext = document.getElementById("qr-text").value;
